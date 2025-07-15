@@ -52,46 +52,59 @@ public class LL {
     }
 
     void ForTraSll(LLN head) {
-        System.out.println("Forward Traversal of Singly Linked List:");
-        System.out.println("Why we can use this approach:");
-        System.out.println("- Because each node has a reference to the next node via 'next' pointer.");
-        System.out.println("- So we can move from head to tail using a loop like: temp = temp.next.");
-        System.out.println("- This is efficient and works in O(n) time with O(1) space.");
-        System.out.println("🔹 Node values in forward order:");
+        System.out.println("=======================================");
+        System.out.println("🔹 Forward Traversal: Singly Linked List");
+        System.out.println("---------------------------------------");
+        System.out.println(" Why this works:");
+        System.out.println(" - Each node has a 'next' pointer.");
+        System.out.println(" - We can move node by node: temp = temp.next.");
+        System.out.println(" - Time: O(n), Space: O(1)");
+        System.out.print(" Values: ");
         LLN temp = head;
         while (temp != null) {
             System.out.print(temp.val + " ");
             temp = temp.next;
         }
-        System.out.println();
+        System.out.println("\n=======================================\n");
     }
 
     void BacTraSll() {
-        System.out.println("Backward Traversal in SLL (Why not possible directly):");
-        System.out.println("- Singly Linked List does NOT have a 'prev' pointer.");
-        System.out.println("- From any node, we can only go FORWARD (temp.next), not backward.");
-        System.out.println("- Once we pass a node, we lose access to it unless we save it.");
-        System.out.println("Workarounds: Use Recursion, Stack, or Reverse the List Temporarily.");
+        System.out.println("=======================================");
+        System.out.println(" Backward Traversal: Singly Linked List");
+        System.out.println("---------------------------------------");
+        System.out.println(" Not possible directly.");
+        System.out.println(" Reason:");
+        System.out.println(" - No 'prev' pointer.");
+        System.out.println(" - Forward-only via 'next'.");
+        System.out.println(" Workarounds:");
+        System.out.println(" - Use Recursion");
+        System.out.println(" - Use Stack");
+        System.out.println(" - Reverse temporarily");
+        System.out.println("=======================================\n");
     }
 
     void ForTraDll(DLLNode head) {
-        System.out.println("Forward Traversal of Doubly Linked List:");
-        System.out.println("Logic: Start from head, move via next pointer until null.");
-        System.out.println("Why it works: Each node has a 'next' pointer like in SLL.");
-        System.out.println("🔹 Node values in forward order:");
+        System.out.println("=======================================");
+        System.out.println("🔹 Forward Traversal: Doubly Linked List");
+        System.out.println("---------------------------------------");
+        System.out.println(" Logic: Move from head to tail using 'next'");
+        System.out.print(" Values: ");
         DLLNode temp = head;
         while (temp != null) {
             System.out.print(temp.val + " ");
             temp = temp.next;
         }
-        System.out.println();
+        System.out.println("\n=======================================\n");
     }
 
     void BacTraDll(DLLNode head) {
-        System.out.println("Backward Traversal of Doubly Linked List:");
-        System.out.println("Logic: Move to tail using next → then move back using prev.");
-        System.out.println("Why it works: DLL nodes have a 'prev' pointer that links to previous node.");
-        System.out.print("🔁 Node values in reverse order: ");
+        System.out.println("=======================================");
+        System.out.println(" Backward Traversal: Doubly Linked List");
+        System.out.println("---------------------------------------");
+        System.out.println(" Logic:");
+        System.out.println(" - Move to tail using 'next'");
+        System.out.println(" - Traverse back using 'prev'");
+        System.out.print(" Values (reversed): ");
         DLLNode temp = head;
         while (temp != null && temp.next != null) {
             temp = temp.next;
@@ -100,7 +113,7 @@ public class LL {
             System.out.print(temp.val + " ");
             temp = temp.prev;
         }
-        System.out.println();
+        System.out.println("\n=======================================\n");
     }
 
     void createSampleList() {
