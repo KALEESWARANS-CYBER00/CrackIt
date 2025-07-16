@@ -1,0 +1,16 @@
+git add .gitignore
+git commit -m "Issue: Add .gitignore to exclude compiled class files"
+# Ignore Java class files
+*.class
+
+# Optional: ignore Eclipse/IDEA project files
+*.log
+*.tmp
+*.swp
+
+# Ignore IDE folders
+/.idea/
+/.vscode/
+/target/
+/out/
+/bin/
