@@ -7,7 +7,7 @@ git commit -m "Issue: Add .gitignore to exclude compiled class files"
 *.log
 *.tmp
 *.swp
-
+*.txt
 # Ignore IDE folders
 /.idea/
 /.vscode/
